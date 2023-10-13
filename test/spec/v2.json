@@ -1513,6 +1513,23 @@
                     "pattern": "^[a-zA-Z0-9']*$"
                 }
             }
+        },
+        "ModelWithConst": {
+            "type": "object",
+            "properties": {
+                "string": {
+                    "const": "string"
+                },
+                "number": {
+                    "const": 0
+                },
+                "boolean": {
+                    "const": false
+                },
+                "null": {
+                    "const": null
+                }
+            }
         }
     }
 }

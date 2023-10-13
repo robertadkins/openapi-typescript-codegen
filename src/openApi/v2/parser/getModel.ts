@@ -149,5 +149,14 @@ export const getModel = (
         return model;
     }
 
+    if (definition.const !== undefined) {
+        model.export = 'const';
+        const definitionConst = definition.const;
+        const modelConst = typeof definitionConst === 'string' ? `"${definitionConst}"` : `${definitionConst}`;
+        model.type = modelConst;
+        model.base = modelConst;
+        return model;
+    }
+
     return model;
 };
